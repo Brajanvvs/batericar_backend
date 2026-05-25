@@ -64,3 +64,9 @@ exports.perfil = async (req, res) => {
     res.status(500).json({ message: 'Error del servidor', error: error.message });
   }
 };
+
+exports.logout = async (req, res) => {
+  // Con JWT (stateless), la sesión se destruye eliminando el token en el frontend.
+  // Este endpoint sirve para confirmar la acción y escalar a futuro si implementas una "blacklist" de tokens.
+  res.status(200).json({ message: 'Sesión cerrada exitosamente' });
+};
