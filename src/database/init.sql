@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS almacen (
 CREATE TABLE IF NOT EXISTS bodegas (
   id_bodega SERIAL PRIMARY KEY,
   nombre VARCHAR(100) NOT NULL,
-  estado VARCHAR(50) NOT NULL,
+  estado VARCHAR(10) DEFAULT 'ACTIVO' CHECK (estado IN ('ACTIVO','INACTIVO')),
   id_almacen INT,
   CONSTRAINT fk_id_almacen FOREIGN KEY (id_almacen) REFERENCES almacen(id_almacen)
 );

@@ -8,7 +8,7 @@ const Bodega = sequelize.define('Bodega', {
     autoIncrement: true
   },
   nombre: { type: DataTypes.STRING(100), allowNull: false },
-  estado: { type: DataTypes.STRING(50), allowNull: false },
+  estado: { type: DataTypes.STRING(10), defaultValue: 'ACTIVO' },
   id_almacen: DataTypes.INTEGER
 }, {
   tableName: 'bodegas',
