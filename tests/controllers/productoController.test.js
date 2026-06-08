@@ -1,4 +1,3 @@
-const httpMocks = require('node-mocks-http');
 const { sanitize } = require('../../src/utils/sanitize');
 
 describe('ProductoController (unitario)', () => {
